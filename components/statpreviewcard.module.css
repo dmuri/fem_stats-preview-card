@@ -1,0 +1,107 @@
+.container {
+    background-color: #1c1938;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    max-width: 300px;
+}
+
+.imageContainer {
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+.imageContainer picture {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.textContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: center;
+    text-align: center;
+    padding: 10px 40px;
+}
+
+.title {
+    font-family: 'Inter', sans-serif;
+    color: white;
+    font-size: 1.7rem;
+}
+
+.title span {
+    color: hsl(277, 64%, 61%)
+}
+
+.description {
+    font-family: 'Inter', sans-serif;
+    color: white;
+    font-size: 0.7rem;
+    opacity: 60%;
+    line-height: 1.5;
+    padding: 10px;
+}
+
+.stats_list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: space-between;
+    font-family: 'Inter', sans-serif;
+    color: white;
+    padding: 1.5rem 0px;
+    text-align: center;
+}
+
+.item_stat {
+    font-weight: bold;
+}
+
+.item_info {
+    font-family: "Lexend Deca", serif;
+    font-size: 0.6rem;
+    opacity: 40%;
+    letter-spacing: 2px;
+
+}
+
+@media (min-width: 795px) {
+    .container {
+        grid-template-columns: 1fr 1fr;
+        max-height: 400px;
+        max-width: 800px;
+    }
+
+    .textContainer {
+        align-items: start;
+        text-align: start;
+        padding: 50px;
+    }
+    .description {
+        padding: 0;
+    }
+    .stats_list {
+        flex-direction: row;
+        text-align: start;
+        padding-top: 50px
+    }
+
+    .imageContainer {
+        grid-column: 2/3;
+        grid-row: 1/2;
+    }
+}
